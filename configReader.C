@@ -1,6 +1,6 @@
 /*
     Written by Joneskim Kimo, 2023
-    This script contains functions for reading and processing the configuration file using the libconfig library. It constains utility functions to convert the settings 
+    This script contains functions for reading configuration files for RNO-G data using the libconfig library. It constains utility functions to convert the settings 
     to strings, retrieve the settings, and handle common aliases.
 
     Libconfig is a C++ library for reading, manipulating, and writing structured configuration files. IT provides a simple API for reading and writing from/to configuration
@@ -199,27 +199,27 @@ std::string getSettingValue(const libconfig::Config& config, const std::string& 
 
 
 /*
-        Retrieves the value of a common setting from the configuration file.
-    
-        This function allows retrieving the value of a common setting from the configuration file. It has a list of common settings and their aliases. 
-        It uses the libconfig library to read the configuration file and retrieve the value of the setting.
-    
-        Parameters
-        ----------
-        config : Config
-            The configuration object that contains the settings.
-        alias :A string
-            The alias of the common setting. The alias is used to determine the path to the setting.
-    
-        Returns
-        -------
-        string
-            The string representation of the setting value.
-    
-        Note:
-            The function returns an empty string if the setting type is not supported.
-            The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
-            The function uses the settingValueToString function to convert the setting value to a string representation.
+    Retrieves the value of a common setting from the configuration file.
+
+    This function allows retrieving the value of a common setting from the configuration file. It has a list of common settings and their aliases. 
+    It uses the libconfig library to read the configuration file and retrieve the value of the setting.
+
+    Parameters
+    ----------
+    config : Config
+        The configuration object that contains the settings.
+    alias :A string
+        The alias of the common setting. The alias is used to determine the path to the setting.
+
+    Returns
+    -------
+    string
+        The string representation of the setting value.
+
+    Note:
+        The function returns an empty string if the setting type is not supported.
+        The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
+        The function uses the settingValueToString function to convert the setting value to a string representation.
 */
 
 
@@ -252,30 +252,30 @@ std::string getCommonSettingValue(const libconfig::Config& config, const std::st
 
 /*
     
-        Reads the configuration file for a run.
-    
-        This function reads the configuration file for a run. 
-    
-        Parameters
-        ----------
-        station : int
-            The station number.
-        run : int
-            The run number.
-        directory : string
-            The directory where the run data is stored.
-        configSettingPath : string
-            The path to the common setting in the configuration file.
-    
-        Returns
-        -------
-        string
-            The string representation of the setting value.
-    
-        Note:
-            The function returns an empty string if the setting type is not supported.
-            The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
-            The function uses the settingValueToString function to convert the setting value to a string representation.
+    Reads the configuration file for a run.
+
+    This function reads the configuration file for a run. 
+
+    Parameters
+    ----------
+    station : int
+        The station number.
+    run : int
+        The run number.
+    directory : string
+        The directory where the run data is stored.
+    configSettingPath : string
+        The path to the common setting in the configuration file.
+
+    Returns
+    -------
+    string
+        The string representation of the setting value.
+
+    Note:
+        The function returns an empty string if the setting type is not supported.
+        The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
+        The function uses the settingValueToString function to convert the setting value to a string representation.
 */
 
 void readConfigFile(int station, int run, const std::string& directory = "data/handcarry22/rootified", const std::string& configSettingPath = "radiant.scalers.use_pps")
@@ -304,28 +304,28 @@ void readConfigFile(int station, int run, const std::string& directory = "data/h
 
 /*
     
-        Example of reading the configuration file for a run.
-    
-        Parameters
-        ----------
-        station : int
-            The station number.
-        run : int
-            The run number.
-        directory : string
-            The directory where the run data is stored.
-        configSettingPath : string
-            The path to the common setting in the configuration file.
-    
-        Returns
-        -------
-        string
-            The string representation of the setting value.
-    
-        Note:
-            The function returns an empty string if the setting type is not supported.
-            The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
-            The function uses the settingValueToString function to convert the setting value to a string representation.
+    Example of reading the configuration file for a run.
+
+    Parameters
+    ----------
+    station : int
+        The station number.
+    run : int
+        The run number.
+    directory : string
+        The directory where the run data is stored.
+    configSettingPath : string
+        The path to the common setting in the configuration file.
+
+    Returns
+    -------
+    string
+        The string representation of the setting value.
+
+    Note:
+        The function returns an empty string if the setting type is not supported.
+        The function only supports the following types of settings: integers, booleans, strings, arrays, and lists.
+        The function uses the settingValueToString function to convert the setting value to a string representation.
 
 */
 
