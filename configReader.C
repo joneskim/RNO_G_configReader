@@ -2,9 +2,6 @@
     Written by Joneskim Kimo, 2023
     This script contains functions for reading configuration files for RNO-G data using the Libconfig library. It constains utility functions to convert the settings 
     to strings, retrieve the settings, and handle common aliases.
-
-    Libconfig is a C++ library for reading, manipulating, and writing structured configuration files. IT provides a simple API for reading and writing from/to configuration
-    files with support for arrays, lists, groups, etc
 */
 
 #include <iostream>
